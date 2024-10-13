@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Doctor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/register_patient">Register Patient</a></li>
+            <li><a href="/register_doctor">Register Doctor</a></li>
+            <li><a href="/register_appointment">Register Appointment</a></li>
+            <li><a href="/assign_room">Assign Room</a></li>
+            <li><a href="/add_prescription">Add Prescription</a></li>
+            <li><a href="/generate_invoice">Generate Invoice</a></li>
+            <li><a href="/view_patient">View Patient</a></li>
+            <li><a href="/view_doctor_patients">View Doctor’s Patients</a></li>
+            <li><a href="/room_availability">View Room Availability</a></li>
+            <li><a href="/view_invoices">View Patient Invoices</a></li>
+        </ul>
+    </nav>
+
+    <h2 style="text-align: center;">Register a New Doctor</h2>
+    <form action="/register_doctor" method="POST">
+        <label>Doctor ID: <input type="text" name="Doctor_ID" required></label><br>
+        <label>First Name: <input type="text" name="Doctor_FName" required></label><br>
+        <label>Last Name: <input type="text" name="Doctor_LName" required></label><br>
+        <label>Department ID: <input type="text" name="Department_ID" required></label><br>
+        <label>Phone Number: <input type="text" name="Doctor_Phone_Number" required></label><br>
+        <button type="submit">Register Doctor</button>
+    </form>
+
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Room</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/register_patient">Register Patient</a></li>
+            <li><a href="/register_doctor">Register Doctor</a></li>
+            <li><a href="/register_appointment">Register Appointment</a></li>
+            <li><a href="/assign_room">Assign Room</a></li>
+            <li><a href="/add_prescription">Add Prescription</a></li>
+            <li><a href="/generate_invoice">Generate Invoice</a></li>
+            <li><a href="/view_patient">View Patient</a></li>
+            <li><a href="/view_doctor_patients">View Doctor’s Patients</a></li>
+            <li><a href="/room_availability">View Room Availability</a></li>
+            <li><a href="/view_invoices">View Patient Invoices</a></li>
+        </ul>
+    </nav>
+
+    <h2 style="text-align: center;">Assign a Room to a Patient</h2>
+    <form action="/assign_room" method="POST">
+        <label>Room Number: <input type="text" name="Room_Num" required></label><br>
+        <label>Patient ID: <input type="text" name="Patient_ID" required></label><br>
+        <label>Staff ID: <input type="text" name="Staff_ID" required></label><br>
+        <label>Admission Date: <input type="date" name="Admission_Date" required></label><br>
+        <button type="submit">Assign Room</button>
+    </form>
+
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Navigation Bar Styles */
+nav {
+    background: linear-gradient(to right, #4CAF50, #81C784); /* Gradient background */
+    padding: 15px; /* Padding for top and bottom */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 0 0 0px 0px; /* Rounded bottom corners */
+    margin-bottom: 20px; /* Space below the navigation */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between items */
+}
+
+nav ul li {
+    flex: 1; /* Distribute space evenly */
+}
+
+nav ul li a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding for clickable area */
+    display: block; /* Make links block-level for full area */
+    text-align: center; /* Center text in links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition effect for background color */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+}
+
+
+
+
+/* Home Style */
+.home {
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.home-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #FFC107;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #FF9800;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the form */
+    max-width: 600px; /* Max width for better layout */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for inputs */
+    margin: 10px 0; /* Margin around inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Message Styles */
+.success, .error {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #4CAF50; /* Green for success */
+    color: white; /* White text */
+}
+
+.error {
+    background-color: #f44336; /* Red for error */
+    color: white; /* White text */
+}
